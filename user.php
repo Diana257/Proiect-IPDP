@@ -12,10 +12,9 @@ session_start();
         margin: 0;
         font-family: Arial, sans-serif;
         background-color: #f2f2f2;
-        background-image: url('photos\acasa_img.jpg'); /* Specifică calea către imaginea de fundal */
-        background-size: cover; /* Asigură că imaginea se va încadra întotdeauna în întreaga zonă a body-ului */
-        background-position: center; /* Centrează imaginea pe ecran */
-        background-repeat: no-repeat; /* Evită repetarea imaginii pe fundal */
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
         }
 
         header {
