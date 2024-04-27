@@ -45,6 +45,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Înregistrare utilizator</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <style>
+        
+        body {
+            margin-top: 120px; 
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -84,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <div class="row">
         <div class="col-md-4 col-md-offset-4 text-center">    
-        Deja aveți un cont? <a href="login.php">Conectați-vă aici</a>
+        Do you already have an account? <a href="login.php">Log in here</a>
         </div>
     </div>
 </div>
