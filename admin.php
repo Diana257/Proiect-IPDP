@@ -27,7 +27,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 30px; /* Adaugă o margine între tabel și header */
+            margin-top: 30px; 
         }
 
         th, td {
@@ -88,8 +88,8 @@ if (isset($_POST['date_introduse'])) {
     $sql = "INSERT INTO clienti(Nume, Prenume, Email, NumarTelefon, Data, Ora, Detalii) VALUES('$Nume', '$Prenume', '$Email', '$Numar_Telefon', '$Data', '$Ora', '$Detalii')";
 
     if ($connection->query($sql) === TRUE) {
-        header("location: test.php"); // Redirecționează către pagina curentă pentru a actualiza afișarea
-        exit(); // Oprește execuția scriptului după redirecționare
+        header("location: admin.php"); // Redirectioneaza catre pagina curenta pentru a actualiza afisarea
+        exit(); // Opreste executia scriptului dupa redirectionare
     } else {
         echo "Error: " . $sql . "<br>" . $connection->error;
     }
