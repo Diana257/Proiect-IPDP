@@ -8,17 +8,14 @@ session_start();
     <title>Programari online</title>
     <link href="css/diana.css" rel="stylesheet" type="text/css" />
     <style>
-       body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat; 
+ 
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
         header {
-           background-color:#467d11;
+            background-color: #467d11;
             color: white;
             padding: 10px 0;
             text-align: center;
@@ -26,32 +23,43 @@ session_start();
             top: 0;
             width: 100%;
             z-index: 1000;
+            height: 50px;
         }
+
         header nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            justify-content: center;
         }
+
         header nav ul li {
             display: inline;
-            margin-right: 20px;
-            margin-top:40px;
+            margin-right: 0;
+            margin-top: 10px;
         }
+
         header nav ul li a {
-            margin-top:40px;
+            margin-top: 10px;
             text-decoration: none;
             color: white;
         }
+
         .body1 {
             text-align: center;
-            padding: 200px 20px 20px; /* Adjust top padding to allow space for the fixed header */
+            padding: 200px;
+            margin-top: 200px;
         }
+
         h2 {
             color: #333;
         }
+
         .programeaza-button {
             margin-top: 20px;
         }
+
         .programeaza-button a {
             display: inline-block;
             padding: 10px 20px;
@@ -60,8 +68,9 @@ session_start();
             text-decoration: none;
             border-radius: 5px;
         }
+
         footer {
-           
+            background-color: black;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -69,11 +78,28 @@ session_start();
             bottom: 0;
             width: 100%;
         }
+
         .footer_p {
             margin: 0;
         }
+
         .footer_p p {
             margin: 0;
+        }
+
+        .image-container {
+    height: 200px;
+    text-align: center;
+    margin-top: -700px;
+    margin-bottom: 50px;
+}
+        .image-container img {
+            width: auto;
+            height: 100%; /* face imaginea să umple înălțimea div-ului */
+        }
+
+        img{
+            display: inline;
         }
     </style>
 </head>
@@ -90,6 +116,7 @@ session_start();
     </nav>
 </header>
 
+
 <div class="body1">
     <?php if (isset($_SESSION['usr_name'])): ?>
         <h2>Bine ai venit, <?= $_SESSION['usr_name'] ?>!</h2>
@@ -101,6 +128,13 @@ session_start();
         <a href="contact.php">Programeaza-te acum!</a>
     </div>
 </div>
+
+
+<div class="image-container">
+    <img src="photos/sanatatea_mentala.jpg" alt="Descrierea imaginii">
+</div>
+
+
 
 <footer>
     <div class="footer_p">
