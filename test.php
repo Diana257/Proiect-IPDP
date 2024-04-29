@@ -10,7 +10,7 @@ if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
 
-// Verificare dacă a fost apăsat butonul "Delete" și există cheia "check" în $_POST
+// Verificare daca a fost apasat butonul "Delete" si exista cheia "check" in $_POST
 if (isset($_POST['delete']) && isset($_POST['check'])) {
     foreach ($_POST['check'] as $key => $value) {
         if ($value == "on") {
@@ -19,7 +19,7 @@ if (isset($_POST['delete']) && isset($_POST['check'])) {
             $sql = "DELETE FROM clienti WHERE Nume='$nume' AND Prenume='$prenume'";
             if ($connection->query($sql) === TRUE) {
                 echo "<meta http-equiv='refresh' content='0'>"; // Actualizare automată a paginii
-                exit(); // Oprește execuția scriptului după redirecționare
+                exit(); // Opreste executia scriptului dupa redirectionare
             } else {
                 echo "Error: " . $sql . "<br>" . $connection->error;
             }
@@ -27,7 +27,7 @@ if (isset($_POST['delete']) && isset($_POST['check'])) {
     }
 }
 
-// Verificare dacă a fost apăsat butonul "Update"
+// Verificare daca a fost apasat butonul "Update"
 foreach ($_POST as $key => $value) {
     if (substr($key, 0, 6) === 'update') {
         $index = substr($key, 6); // Extrage indexul din numele butonului
@@ -40,8 +40,8 @@ foreach ($_POST as $key => $value) {
 
         $sql = "UPDATE clienti SET NumarTelefon='$numarTelefon', Data='$dataProgramare', Ora='$ora', Detalii='$detalii' WHERE Nume='$nume' AND Prenume='$prenume'";
         if ($connection->query($sql) === TRUE) {
-            echo "<meta http-equiv='refresh' content='0'>"; // Actualizare automată a paginii
-            exit(); // Oprește execuția scriptului după redirecționare
+            echo "<meta http-equiv='refresh' content='0'>"; // Actualizare automata a paginii
+            exit(); // Opreste executia scriptului dupa redirectionare
         } else {
             echo "Error: " . $sql . "<br>" . $connection->error;
         }
