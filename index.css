@@ -1,0 +1,66 @@
+
+header{
+	background: white;
+	
+}
+nav{
+	padding: 0px;
+	margin-bottom: -59px;
+	margin-top: 10px;
+}
+nav ul{
+	
+	display: inline;
+	float: right;
+	margin-right: 50px;
+	margin-top: 15px;
+	font-size: 17px;
+}
+nav ul li{
+	display: inline-block;
+	list-style-type: none;
+	padding: 5px 10px 0px 10px;
+	color: grey;
+
+}
+nav ul li a{
+	padding: 10px ;
+	color: grey;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color:#38b672;
+}
+#box{
+	position: absolute;
+	margin-top: -70px;
+	width: 900px;
+	
+}
+#one{
+	background-color: #38b672;
+	width:  300px;
+	height: 260px;
+	float: left;
+}
+#tree{
+	background-color: #2aa160;
+	width:  300px;
+	height: 260px;
+	float: right;
+}
+#two{
+	background-color: #2cab66;
+	width:  300px;
+	height: 260px;
+	float: right;
+}
+h2{
+	color: white;
+	padding-left: 35px;
+	padding-top: 15px;
+}
+
+
+

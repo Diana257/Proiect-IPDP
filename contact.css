@@ -1,0 +1,53 @@
+/* Existing styles */
+nav {
+    background-color: #bd9c79;
+    height: 37px;
+    width: 100%;
+    margin-top: -4px;
+    text-align: center;
+}
+nav ul {
+    display: inline;
+    margin-left: 180px;
+    margin-right:  250px;    
+    font-size: 17px;
+}
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+}
+nav ul li a {
+    padding: 35px;
+    color: white;
+    text-decoration: none !important;
+}
+nav ul li a:hover {
+    color: #FFF8DC;
+}
+
+
+
+footer img {
+    margin-left: 8px;
+    height: 15px;
+    width: 15px;
+}
+
+.col-xs-4 table tbody tr {
+    padding-top: 5px;
+}   
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+.footer_p {
+    margin: 0;
+}
+.footer_p p {
+    margin: 0;
+}
+

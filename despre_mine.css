@@ -1,0 +1,239 @@
+/* Stiluri pentru elemente comune 
+* {
+    box-sizing: border-box;
+}*/
+
+/* Stiluri pentru header 
+header {
+    background-color: #af859d;
+    padding: 10px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}*/
+
+/* Stiluri pentru sectiuni 
+.body1,
+.body2,
+.body3,
+.body4,
+.body5,
+.body6,
+.body7 {
+    padding: 20px;
+}*/
+
+/* Stiluri pentru text 
+.text_p1,
+.text_p2,
+.text_p3,
+.text_p4,
+.text_p5,
+.text_p6 {
+    margin: 0 auto;
+    max-width: 800px;
+}*/
+
+/* Stiluri pentru imagini 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.photo1_b4,
+.photo1_b5 {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}*/
+
+/* Stiluri pentru footer 
+footer {
+    background-color: #28272f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}*/
+
+/* Stiluri pentru login 
+.footer_p a {
+    color: white;
+    text-decoration: none;
+}*/
+
+/* Media queries pentru responsive design 
+@media only screen and (min-width: 768px) {
+    nav ul {
+        margin-left: 50px;
+    }
+
+    .text_p1,
+    .text_p2,
+    .text_p3,
+    .text_p4,
+    .text_p5,
+    .text_p6 {
+        margin: 0;
+    }
+
+    .photo1_b4,
+    .photo1_b5 {
+        float: left;
+        margin-left: 50px;
+        margin-top: 0;
+    }
+
+    .text_p4,
+    .text_p5 {
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}*/
+
+nav{
+	background-color: #af859d;
+	height: 37px;
+	width: 100%;
+	text-align: center;
+}
+nav ul{
+	display: inline;
+	margin-left: 200px;
+	margin-right:  200px;	
+	font-size: 17px;
+}
+nav ul li{
+
+	display: inline-block;
+	list-style-type: none;
+	padding: 10px;
+}
+nav ul li a{
+	padding: 35px ;
+	color: white;
+     text-decoration: none;
+}
+nav ul li a:hover{
+    color:	#800080;
+}
+.body1{
+	text-align: center;
+	padding: 60px;
+}
+
+.text_p1{
+	margin-right: 140px;
+	margin-left: 140px;
+}
+
+.body2{
+	background-color: #d2acc1;
+	height: 500px;
+    
+}
+.text_p2{
+	margin-top: 100px;
+	text-align: center;
+	margin-right: 150px;
+	margin-left: 570px;
+	background-color: white;
+	padding: 20px;
+
+}
+.body3{
+	text-align: center;
+	padding: 60px;
+}
+.text_p3{
+	margin-right: 140px;
+	margin-left: 140px;
+}
+
+.body4{
+	background-color: #dcc9d6;
+	height: 900px;
+}
+.photo1_b4{
+	background-color: white;
+	margin-left: 170px;
+	padding: 20px;
+	float: left;
+	text-align: center;
+}
+
+
+.text_p4{
+	margin-top: 30px;
+	text-align: center;
+	margin-right: 100px;
+	margin-left: 700px;
+	background-color: white;
+	padding: 40px;
+	
+}
+
+.body5{
+	background-color: #dcc9d6;
+	height: 10px;
+}
+
+.photo1_b5{
+	background-color: white;
+	margin-left: 170px;
+	padding: 20px;
+	float: left;
+	text-align: center;
+}
+
+.text_p5{
+	margin-top: 20px;
+	text-align: center;
+	margin-right: 100px;
+	margin-left: 700px;
+	background-color: white;
+	padding: 30px;
+	
+}
+
+.body6{
+	text-align: center;
+	padding: 30px;
+}
+
+.text_p6{
+	margin-top: 20px;
+	text-align: center;
+	margin-right: 190px;
+	margin-left: 170px;
+	background-color: white;
+	padding: 40px;
+	width: 60%;
+}
+
+.body7{
+	background-color: white;
+	height: 930px;
+}

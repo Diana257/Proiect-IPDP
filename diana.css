@@ -1,0 +1,53 @@
+nav{
+	margin-top: 10px;
+	background-color: #467d11;
+	height: 37px;
+	width: 100%;
+	
+}
+nav ul{
+	display: inline;
+	margin-left: 250px;
+	margin-right:  250px;	
+	font-size: 17px;
+	
+}
+nav ul li{
+	margin-top: 10px;
+	display: inline-block;
+	list-style-type: none;
+	padding: 10px;
+}
+nav ul li a{
+	margin-top: 10px;
+	padding: 35px ;
+	color: white;
+
+}
+.body1{
+	margin-top: 10px;
+	height: 300px;
+	
+}
+
+footer img{
+	margin-left: 8px;
+	height: 15px;
+	width: 15px;
+}
+
+footer {
+           
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.footer_p {
+	margin: 0;
+}
+.footer_p p {
+	margin: 0;
+}

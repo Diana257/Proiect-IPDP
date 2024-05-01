@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Întrebări frecvente</title>
+    <link href="css/intrebari.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+</head>
+<body ng-app="instantSearch">
+
+<header>
+    <!--Poza-->
+    <img src="photos/intrebari.jpg" style="width: 100%; height:315px; margin-top: 0px;">
+    <nav>
+        <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="despre_mine.html">Despre mine</a></li>
+            <li><a href="intrebari_frecvente.html">Întrebări frecvente</a></li>
+            <li><a href="contact.php">Programări online</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="body1">
+    <h2>
+        <p>"O întâlnire în doi: ochi în ochi, față în față.
+            <br> Și când îmi vei fi alături îți voi lua ochii
+            <br> Și-i voi pune în locul alor mei,
+            <br> Și tu vei lua ochii mei
+            <br> Și-i vei pune În locul alor tăi.
+            <br> Și atunci eu te voi privi cu ochii tăi
+            <br> Și tu mă vei privi cu ai mei.”
+        </p>
+    </h2>
+    <h3> <i>(J. L. Moreno, "Invitație la o întâlnire", 1912)</i></h3>
+</div>
+
+<div class="body2">
+    <img src="photos/body1_1.jpg" style="width: 100%; height:25px; margin-top: 0px;">
+    <h1>Întrebari frecvente</h1>
+    <h3>1. Cât costă o ședință?</h3>
+    <h3>2. Cum se desfășoară prima ședință?</h3>
+    <h3>3. Cum îmi fac programare?</h3>
+</div>
+
+<div class="body3">
+    <!--Patratele-->
+    <div id="box">
+        <div id="one">
+            <div class="text_p3">
+                </br></br></br>
+                <p style="font-size:  20px;">1. Prețul ședinței variază în funcție de tipul terapiei. </p>
+            </div>
+        </div>
+
+        <div id="tree">
+            <div class="text_p3">
+                </br></br>
+                <p style="font-size:  20px;">3. Programarea se poate face accesând formularul de pe site iar confirmarea o veți primi telefonic. </p>
+            </div>
+        </div>
+
+        <div id="two">
+            <div class="text_p3">
+                </br></br>
+                <p style="font-size:  20px;">2. Prima ședință constă în cunoașterea pacientului și a problemelor cu care acesta se confruntă.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="body4" ng-controller="InstantSearchController">
+    <div class="bar">
+        <input type="text" ng-model="searchString" placeholder="Caută o întrebare" />
+    </div>
+
+    <ul>
+        <li ng-repeat="i in items | searchFor:searchString">
+            <img ng-src= "{{i.image}}" /></a>
+            <h3>  {{i.question}}</h3>
+            <p>{{i.answer}}</p>
+        </li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/index.js"></script>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow60.js"></script>
+<noscript>Not seeing a <a href="http://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
+
+</body>
+</html>

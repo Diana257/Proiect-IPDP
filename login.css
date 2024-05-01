@@ -1,0 +1,63 @@
+nav{
+	background-color: #af859d;
+	height: 37px;
+	width: 100%;
+	margin-top: -4px;
+}
+nav ul{
+	display: inline;
+	margin-left: 250px;
+	margin-right:  250px;	
+	font-size: 17px;
+}
+nav ul li{
+
+	display: inline-block;
+	list-style-type: none;
+	padding: 10px;
+}
+nav ul li a{
+	padding: 35px ;
+	color: white;
+
+}
+.body{
+	height: 400px;
+	width: 500px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #2ca869;
+	border-radius: 5px;
+	margin-top: 150px;
+
+}
+.body img{
+	width: 140px;
+	height: 140px;
+	margin-top:  -70px;
+}
+input{
+	height: 40px;
+	width: 300px;
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+.login1{
+	margin-top: 30px;
+
+}
+footer{
+	background-color: #28272f;
+	height: 100px;
+}	
+footer img{
+	margin-left: 8px;
+	height: 15px;
+	width: 15px;
+}
+.footer_p{
+	margin-left: 230px;
+	margin-right: 230px;
+	padding-top: 15px;
+	color: white;
+}
