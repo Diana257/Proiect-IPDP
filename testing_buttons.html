@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testare Butoane</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testare Butoane</h1>
+    
+    <!-- Buton pentru a trimite formularul către contact.php -->
+    <a href="contact.php"><button>Programare Online</button></a>
+    
+    <!-- Buton care duce catre pagina de login.php -->
+    <a href="login.php"><button>Conectare</button></a>
+    
+    <!-- Buton care apelează o functie JavaScript -->
+    <button onclick="alert('Buton apăsat!')">Apasă-mă</button>
+
+    <!-- Buton pentru deconectare (logout.php) -->
+    <a href="logout.php"><button>Deconectare</button></a>
+
+</body>
+</html>
