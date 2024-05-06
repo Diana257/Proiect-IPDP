@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Verifică dacă formularul a fost trimis
+// Verifica daca formularul a fost trimis
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['date_introduse'])) {
 
     // Conectare la baza de date
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['date_introduse'])) {
         die("Connection failed: " . $connection->connect_error);
     }
 
-    // Preluare și escapare datele din formular
+  
     $nume = mysqli_real_escape_string($connection, $_POST['nume']);
     $prenume = mysqli_real_escape_string($connection, $_POST['prenume']);
     $email = mysqli_real_escape_string($connection, $_POST['e-mail']);
@@ -23,21 +23,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['date_introduse'])) {
     $ora = mysqli_real_escape_string($connection, $_POST['ora']);
     $detalii = mysqli_real_escape_string($connection, $_POST['detalii']);
 
-    // Formatarea datei în formatul dorit (YYYY-MM-DD)
+    // Formatarea datei in formatul dorit (YYYY-MM-DD)
     $data_formatata = date('Y-m-d', strtotime($data));
 
-    // Verificare dacă există deja o programare la aceeași dată și oră
+    // Verificare daca exista deja o programare la aceeasi data si ora
     $check_query = "SELECT * FROM clienti WHERE Data='$data_formatata' AND Ora='$ora'";
     $result = mysqli_query($connection, $check_query);
     if (mysqli_num_rows($result) > 0) {
-        // Afișează mesaj de eroare și oprește scriptul
+        // Afiseaza mesaj de eroare si opreste scriptul
         echo '<script>alert("Această oră este deja ocupată. Te rugăm să alegi alta oră.")</script>';
     } else {
         // Interogare SQL pentru inserare
         $insert_query = "INSERT INTO clienti (Nume, Prenume, Email, NumarTelefon, Data, Detalii, Ora) 
                          VALUES ('$nume', '$prenume', '$email', '$numarTelefon', '$data_formatata', '$detalii', '$ora')";
 
-        // Execută interogarea
+        // Executa interogarea
         if ($connection->query($insert_query) === TRUE) {
             echo "Programarea a fost înregistrată cu succes!";
         } else {
@@ -61,11 +61,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['date_introduse'])) {
     <link href="css/contact.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <style>
-        /* Adaugă această secțiune în CSS pentru a fixa dimensiunile câmpurilor de introducere */
+        
         .input-field {
             width: 100%;
             padding: 8px;
-            box-sizing: border-box; /* pentru a include padding-ul în lățimea totală */
+            box-sizing: border-box; 
         }
     </style>
 </head>
@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['date_introduse'])) {
                                 <td>Ora programare:</td>
                                 <td>
                                     <select name="ora" id="ora" class="input-field">
-                                        <!-- Opțiuni inițiale (de aici începe actualizarea cu JavaScript) -->
+                                        
                                     </select>
                                 </td>
                             </tr>
@@ -166,20 +166,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['date_introduse'])) {
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Inițializează Datepicker-ul pentru câmpul de introducere a datei
+            // Initializeaza Datepicker-ul pentru campul de introducere a datei
             $('#data').datepicker({
                 minDate: 0, // Permite doar datele viitoare
                 beforeShowDay: function(date) {
                     var day = date.getDay();
-                    // Excludem sâmbăta (ziua 6) și duminica (ziua 0)
+                    // Excludem sambata (ziua 6) si duminica (ziua 0)
                     return [(day != 0 && day != 6), ''];
                 },
                 onSelect: function(date) {
                     var day = new Date(date).getDay();
                     var oraSelect = $('#ora');
-                    oraSelect.empty(); // Curăță opțiunile anterioare
+                    oraSelect.empty(); // Curata optiunile anterioare
 
-                    if (day == 1 || day == 2) { // Luni și Marți
+                    if (day == 1 || day == 2) { // Luni si Marti
                         for (var i = 8; i <= 16; i++) {
                             oraSelect.append($('<option>', {
                                 value: i + ':00',
